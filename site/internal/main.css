@@ -33,6 +33,7 @@ div.content-wrapper {
 }
 
 div.content {
+    width:99%;
     background-color: #cbcbcb;
     padding: 4pt;
     margin: 8pt auto;
