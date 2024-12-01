@@ -4,7 +4,7 @@ Website for a currently hypothetical real-time strategy video game.
 
 This is a project for my Intro to Web Development class, created to showcase my website designing skills.
 
-See abstract.html for the design proposal.
+See abstract.html for the design proposal. The website is located [here](https://bdecuir.github.io/INF286-Final/site/index.html).
 
 As of writing this, I do not believe I will have the time to create a working game by the time this project is due. If the opportunity arises, I may revisit this project to add such a game.
 
