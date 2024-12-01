@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    font-family: 'Cabin', Arial, Helvetica, sans-serif;
+}
+
 #background {
     background-image: url("../content/bg/bg_tile.png");
     background-repeat: repeat-x repeat-y;
@@ -15,6 +21,118 @@
     }
 }
 
+div.content-wrapper {
+    width:95%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border: 4pt solid #bebebe;
+    padding: 10pt;
+    display:flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+div.content {
+    background-color: #cbcbcb;
+    padding: 4pt;
+    margin: 8pt auto;
+    flex: 1 1 auto;
+}
+
 div.title {
+    width:98%;
+    padding: 8pt;
+    font-size: 24pt;
+    font-weight: bold;
+    text-align:center;
+    border-top: 2pt solid #000000;
+    border-bottom: 2pt solid #000000;
+    margin: 8pt auto;
+    flex: 0 1 auto;
+}
+
+div.title>span.title-desc {
+    font-size:10pt;
+    font-style:italic;
+}
+
+div.section-title-wrapper {
+    /* background-color: #f00b08; */
     
+    background-image: linear-gradient(to right, #f00b08, #9e2403);
+}
+
+div.section-title {
+    width: fit-content;
+    min-width: 12.5%;
+    padding: 4pt 16pt;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+div.footer {
+    background-color: #242424;
+    color: #ffffff;
+    padding: 4pt;
+    margin: 8pt auto;
+    flex: 1 1 auto;
+    width: 99%;
+    display: flex;
+    align-items: flex-start;
+    flex: 0 1 auto;
+}
+
+div.footer div {
+    width: 50%;
+    border: 2pt solid #121212;
+    margin: 4pt auto;
+    padding: 0 16pt;
+    content: "";
+    clear: both;
+    display: table;
+    height:100%;
+}
+
+div.header {
+    display: flex;
+    align-items: flex-start;
+    width: 99%;
+    margin: 0 auto;
+}
+
+div.header>div {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+div.header>div>* {
+    padding: 4pt 8pt;
+    /* max-width: 25%; */
+    height:100%;
+    margin: auto;
+}
+
+div.header>div>nav {
+    display: flex;
+    align-items:flex-end;
+}
+
+div.header>div>nav>a {
+    background-color:#f00b08;
+    border-radius:32pt;
+    margin:8pt;
+    padding:8pt;
+    color: #ffffff;
+    text-decoration-line: none;
+    box-shadow: 0 4px #9e2403;
+}
+
+div.header>div>nav>a:hover {
+    background-color: #f95b6d;
+    box-shadow:none;
+    position:relative;
+    top:2px;
 }
