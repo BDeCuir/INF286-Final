@@ -4,7 +4,42 @@
     <head>
         <title>Game...? - Untitled RTS Game</title>
         <link rel="stylesheet" href="../internal/main.css">
-        
+        <script>
+            var clicks = 0;
+            var red_bots = 0;
+            var blue_bots = 0;
+
+            function reset() {
+                clicks = 0;
+                var red_bots = 0;
+                var blue_bots = 0;
+                update_counter();
+            }
+
+            function screen_saver() {
+                var game_screen = document.getElementById("game-screen");
+                var ctx = game_screen.getContext("2d");
+                var red = document.getElementById("screensaver_red");
+                var blue = document.getElementById("screensaver_blue");
+                if (Math.floor(Math.random() * 2) > 0.5) {
+                    ctx.drawImage(red, Math.floor(Math.random() * 1200), Math.floor(Math.random() * 640));
+                    red_bots ++;
+                }
+                else {
+                    ctx.drawImage(blue, Math.floor(Math.random() * 1200), Math.floor(Math.random() * 640));
+                    blue_bots ++;
+                }
+                clicks++;
+                update_counter();
+            }
+
+            function update_counter() {
+                var counter = document.getElementById("counter");
+                var measurer = document.getElementById("measurer");
+                counter.textContent = "Clicks: " + clicks;
+                measurer.textContent = "Red: " + red_bots + " (" + Math.floor(red_bots / clicks * 100) + "%), Blue: " + blue_bots + " (" + Math.floor(blue_bots / clicks * 100) + "%)";
+            }
+        </script>
     </head>
     <body id="background">
 
@@ -26,39 +61,49 @@
             </div>
 
             <div class="title">
-                Game...?<br>
-                <span class="title-desc">There's nothing here <b>YET</b>. Sorry to disappoint.</span>
+                Play<br>
+                <span class="title-desc">The game in question</span>
             </div>
 
             <div class="content">
                 <div class="section-title-wrapper">
-                    <div class="section-title">What's this?</div>
+                    <div class="section-title">Play Now!</div>
                 </div>
-                <p>Like I said on another page, the game isn't really in a state where I would feel good about including it here. Maybe if I have time and want to come back to this project there may be something here, but for now there isn't.</p>
-                <p>As I put in the abstract, I was planning on adding a game to the project <i>if</i> I had the time, and as time went on it became more and more apparent that I didn't.</p>
+                <p><i>Didn't have time to make the game I planned to, but hopefully this will suffice! Try clicking the canvas!</i></p>
+                <p id="counter" style="text-align:center;">Clicks: 0</p>
+                <p id="measurer" style="text-align:center;">Red: 0 (0%), Blue: 0 (0%)</p>
+                <div id="game-screen-wrapper" style="margin: 16px auto; width: 70%; height: 70%;">
+                    <canvas id="game-screen" width="1200px" height="640px" style="border:8px solid #9e2403; background-color: #000000;" onclick="screen_saver()" onload="reset()">
+                        <!-- <img id="screensaver" src="../content/icons/red_worker_spin.gif" width="32px" height="48px"/> -->
+                        <img id="screensaver_red" src="../content/guide/renders/units/worker/red.png" width="16px" height="24px"/>
+                        <img id="screensaver_blue" src="../content/guide/renders/units/worker/blue.png" width="16px" height="24px"/>
+                    </canvas>
+                </div>
             </div>
             <div class="footer">
                 <div>
                     <h4>Social Media</h4>
                     <ul>
                         <li>
-                            Nope
+                            Github (you are here!)
                         </li>
                     </ul>
                 </div>
                 <div>
                     <p>
-                        Address<br>
-                        Cannot Drive | Nothing, Nothing 00000
+                        Nonexistent Building<br>
+                        Null Street | Nothing, Nowhere 00000
                     </p>
                 </div>
                 <div>
                     <h4>Navigation Links</h4>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../guide/guide.html">Guide</a</li>>
-                        <li><a href="../guide/history_roadmap.html">History / Roadmap</a></li>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="guide/guide.html">Guide</a></li>
+                            <li><a href="guide/history_roadmap.html">History / Roadmap</a></li>
+                        </ul>
                     </ul>
                 </div>
             </div>
